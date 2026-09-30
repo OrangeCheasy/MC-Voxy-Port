@@ -1,6 +1,10 @@
 name: check-does-build-pr
 
-on: [ pull_request ]
+on:
+  pull_request:
+    branches:
+      - main
+      - 'v[0-9]+.[0-9][0-9]'
 jobs:
   build:
     runs-on: ubuntu-latest
